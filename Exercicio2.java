@@ -1,19 +1,18 @@
 import java.util.Scanner;
 
-public class Exercicio2 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+public class Atividade2 {
 
-        // Solicitar o preço do produto
-        System.out.print("Informe o valor do produto: ");
-        double preco = scanner.nextDouble();
+	public static void main(String[] args) {
+		double a, res;
+		Scanner sc = new Scanner(System.in);
 
-        // Calcular o novo preço com 10% de acréscimo
-        double novoPreco = preco * 1.10;
+		System.out.print("Informe o valor do produto para acréscimo de 10%: ");
+		a = sc.nextDouble();
+		
+		res = (a*10) / 100 + a;
+		
+		System.out.println("O valor com acréscimo é: "+ res);
+		sc.close();
+	}
 
-        // Exibir o novo preço
-        System.out.println("Novo valor do produto: " + novoPreco);
-
-        scanner.close();
-    }
 }
