@@ -1,19 +1,17 @@
 import java.util.Scanner;
 
-public class Exercicio3 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+public class Atividade3 {
 
-        // Solicitar a temperatura em Fahrenheit
-        System.out.print("Informe a temperatura em Fahrenheit: ");
-        double fahrenheit = scanner.nextDouble();
+	public static void main(String[] args) {
+		double cel, far;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Informe temperatura em Fahrenheit: ");
+		far = sc.nextDouble();
+		
+		cel = (far - 32) / 1.8;
+		System.out.print("A temperatura em  graus Celsius é: "+ cel);
+		sc.close();
+	}
 
-        // Converter para Celsius
-        double celsius = (fahrenheit - 32) / 1.8;
-
-        // Exibir o resultado
-        System.out.println("Temperatura em Celsius: " + celsius);
-
-        scanner.close();
-    }
 }
