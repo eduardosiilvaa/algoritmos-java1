@@ -1,22 +1,19 @@
 import java.util.Scanner;
 
-public class Exercicio1 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+public class Atividade1 {
 
-        // Solicitar os números ao usuário
-        System.out.print("Digite o primeiro número: ");
-        double numero1 = scanner.nextDouble();
-
-        System.out.print("Digite o segundo número: ");
-        double numero2 = scanner.nextDouble();
-
-        // Calcular a média
-        double media = (numero1 + numero2) / 2;
-
-        // Exibir o resultado
-        System.out.println("A média é: " + media);
-
-        scanner.close();
-    }
+	public static void main(String[] args) {
+		double a, b, media;
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Informe o primeiro número para gerar a média aritmética: ");
+		a = sc.nextDouble();
+		System.out.print("Informe o segundo número para gerar a média aritmética: ");
+		b = sc.nextDouble();
+		
+		media = (a + b) / 2;
+		
+		System.out.println("A média dos números é: "+ media);
+		
+		sc.close();
+	}
 }
