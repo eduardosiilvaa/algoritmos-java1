@@ -1,29 +1,30 @@
 import java.util.Scanner;
 
-public class Exercicio10 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+public class Atividade10 {
 
-        // Solicitar os três valores
-        System.out.print("Informe o primeiro valor: ");
-        double a = scanner.nextDouble();
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		double a, b, c, mediaAritmetica, mediaHarmonica, mediaGeometrica;
+		
+        System.out.print("Digite o valor de a: ");
+        a = scanner.nextDouble();
+        
+        System.out.print("Digite o valor de b: ");
+        b = scanner.nextDouble();
+        
+        System.out.print("Digite o valor de c: ");
+        c = scanner.nextDouble();
+        
+        mediaAritmetica = (a + b + c) / 3;
+        mediaHarmonica = 3 / ((1 / a) + (1 / b) + (1 / c));
+        mediaGeometrica = Math.cbrt(a * b * c); // Raíz cúbica
 
-        System.out.print("Informe o segundo valor: ");
-        double b = scanner.nextDouble();
-
-        System.out.print("Informe o terceiro valor: ");
-        double c = scanner.nextDouble();
-
-        // Calcular as médias
-        double mediaAritmetica = (a + b + c) / 3;
-        double mediaHarmonica = 3 / (1/a + 1/b + 1/c);
-        double mediaGeometrica = Math.pow(a * b * c, 1.0/3.0);
-
-        // Exibir o resultado
-        System.out.println("Média Aritmética: " + mediaAritmetica);
-        System.out.println("Média Harmônica: " + mediaHarmonica);
-        System.out.println("Média Geométrica: " + mediaGeometrica);
+        System.out.printf("Média Aritmética: %.2f%n", mediaAritmetica);
+        System.out.printf("Média Harmônica: %.2f%n", mediaHarmonica);
+        System.out.printf("Média Geométrica: %.2f%n", mediaGeometrica);
 
         scanner.close();
-    }
+
+	}
+
 }
